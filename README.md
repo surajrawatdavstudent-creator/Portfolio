@@ -1,72 +1,48 @@
-# Suraj Rawat — Portfolio
+# Suraj Rawat — Engineering Portfolio
 
-A personal portfolio for my work in programming, electronics, robotics, automation, and embedded systems.
+A personal portfolio for a student exploring Robotics, Mechatronics, Automation, and Embedded Systems.
 
-## About This Project
+## Stack
 
-This repository contains the code for my personal portfolio website.
+React 19 and TypeScript with Vinext file-based routes. Shared components and one typed content file keep the portfolio maintainable. No database, contact backend, analytics, or custom authentication was added. Sites controls access to the private preview.
 
-The portfolio is meant to show my projects, skills, courses, and other work in one place.
+## Start and edit
 
-## Main Pages
+1. Use Node 22.13 or newer.
+2. Run `npm ci` to install the locked dependencies.
+3. Run `npm run dev` and open the address printed by the server.
+4. Edit `content/portfolio.ts` to update your content.
+5. Add approved files under `public/` and use paths beginning with `/`.
+6. Run `npm run build` to prepare the site for deployment.
 
-- Home
-- About Me
-- Skills
-- Projects
-- Qualifications
-- Contact
-- Project details
+The managed Sites environment uses its supervised preview and build controls; the checked-in scripts also support ordinary local development.
 
-## Tech Used
+## Pages
 
-- React
-- TypeScript
-- Vinext
-- HTML
-- CSS
-- Git
-- GitHub
+- Home: `/`
+- About Me: `/about`
+- Skills: `/skills`
+- Projects: `/projects`
+- Qualifications: `/qualifications`
+- Contact: `/contact`
+- Project details: `/projects/[slug]`
+- Unknown addresses: custom 404 page
 
-## Run Locally
+The five non-Home navigation links open new tabs, with the required security attributes and accessible explanations. Home, logo, and individual project links navigate in the current tab.
 
-1. Install Node 22.13 or newer.
-2. Run `npm ci`.
-3. Run `npm run dev`.
-4. Open the local address shown in the terminal.
+## Files
 
-To edit the portfolio content, update `content/portfolio.ts`.
+- `content/portfolio.ts` — editable portfolio data, content types, and publication state.
+- `app/` — page templates, metadata, and shared styles.
+- `components/site-*` and `components/portfolio-ui.tsx` — reusable portfolio interface.
+- `components/ui/` — the starter component library; Sheet supplies the accessible mobile menu.
+- `public/` — approved images, files, and favicon.
+- `docs/EDITING-GUIDE.md` — content replacement and media instructions.
+- `docs/CONTENT-CHECKLIST.md` — information still needed.
+- `docs/QA.md` — checks actually performed and testing limits.
 
-To prepare the site for deployment, run:
+## Preview content
 
-```bash
-npm run build
-```
+No portrait, project evidence, public email, social profile, CV, or certificate files were supplied for this build. Those spaces are explicitly labeled or hidden. Proposed project statuses and credential completion are not inferred. The private preview has search indexing disabled.
 
-## Project Structure
-
-```text
-Portfolio/
-├── app/
-├── components/
-├── content/
-├── public/
-├── docs/
-└── package.json
-```
-
-## Portfolio Content
-
-The site is being built around real projects and real learning evidence. I do not want to add skills or achievements that I cannot show with actual work.
-
-Project photos, videos, certificates, and other proof can be added as they become ready.
-
-## Goal
-
-The goal is to make a simple portfolio that clearly shows what I have built, what I learned, and how I am improving over time.
-
-## About Me
-
-**Suraj Rawat**
-
-Student building projects in Python, electronics, robotics, automation, and embedded systems.
+Keep `previewMode: true` until the content is ready for review. Setting it to false excludes unconfirmed projects, credentials, and skills. Supply real evidence before sharing the finished portfolio with reviewers.
